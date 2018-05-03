@@ -125,6 +125,7 @@ describe('Restaurants API resource', function() {
           res = _res;
           expect(res).to.have.status(200);
           // otherwise our db seeding didn't work
+          console.log(res.body);
           expect(res.body.restaurants).to.have.length.of.at.least(1);
           return Restaurant.count();
         })
